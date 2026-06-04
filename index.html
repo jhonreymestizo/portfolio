@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            color: #334155;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #f8fafc;
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .project-details ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-list a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="dev-name">Jhon Rey Mestizo</h1>
+        <p>Aspirant Software Developer | OJT Candidate</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Computer Science student at North Eastern Mindanao State University (NEMSU) Tandag City Campus. Focused strictly on software development, building efficient backends, and designing structured systems within collaborative team environments.</p>
+            <div class="tech-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Git / GitHub</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Core Software Projects</h2>
+
+            <div class="project-card">
+                <h3>SafeTrack</h3>
+                <div class="project-meta"><strong>Team Size:</strong> 4 Members | <strong>Role:</strong> Backend & Logic Developer</div>
+                <div class="project-details">
+                    <p>A motorized information and vehicular management software system engineered for secure fleet tracking and transaction validation.</p>
+                    <ul>
+                        <li>Collaborated with team members to map requirements and optimize data structures.</li>
+                        <li>Designed and coded the transaction workflow logic using PHP and MySQL.</li>
+                        <li>Programmed the strict access controls to ensure that receipt generation is executed securely on the driver account interface immediately following payment approval, preventing administrative override vulnerabilities.</li>
+                    </ul>
+                </div>
+                <button class="btn" onclick="toggleRepo('safetrack-info')">View Details</button>
+                <div id="safetrack-info" style="display:none; margin-top:1rem; color:#475569; font-size:0.95rem;">
+                    <p><strong>Database Architecture:</strong> Relational schema utilizing indexed foreign keys to link driver profiles, vehicles, and real-time transaction logs securely.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Scholars Dungeon</h3>
+                <div class="project-meta"><strong>Team Size:</strong> 4 Members | <strong>Role:</strong> Core System Architecture</div>
+                <div class="project-details">
+                    <p>A gamified learning application designed to parse static educational documents and transform them into interactive RPG combat encounters.</p>
+                    <ul>
+                        <li>Coordinated with the project development team to establish data parsing pipelines.</li>
+                        <li>Assisted in researching Retrieval Augmented Generation methodologies to extract dynamic quiz components from text files.</li>
+                        <li>Implemented state tracking mechanics to accurately manage character progression and combat outcomes.</li>
+                    </ul>
+                </div>
+                <button class="btn" onclick="toggleRepo('scholars-info')">View Details</button>
+                <div id="scholars-info" style="display:none; margin-top:1rem; color:#475569; font-size:0.95rem;">
+                    <p><strong>Stack Focus:</strong> Structured data processing engines paired with asynchronous frontend state updates for fluid gameplay logic.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Links</h2>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:jhonreymestizo@example.com">jhonreymestizo@example.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com" target="_blank">github.com/yourusername</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function toggleRepo(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
